@@ -25,3 +25,10 @@
 ## Workflow follow-up
 
 - 评审通过后归档该变更，并确认 `openspec/specs/hough-circle-detection/spec.md` 已由归档流程生成。
+
+## 交接备注（2026-11-16）
+
+- 完成状态：4 组任务共 10 项全部完成；自动测试 4 项通过，包含真实 Tk 窗口冒烟（本次环境 `DISPLAY=:0`，未跳过）；无界面命令输出与 README 完全一致。
+- 复验环境：Python 3.12.3、OpenCV 4.14.0、NumPy 2.5.5、Pillow 11.3.0，均落在 `requirements.txt` 的版本范围内；`acceptance.md` 的首轮记录使用 OpenCV 4.6.0，两次结果数量与半径一致。
+- 未验证事项：归档与 `openspec/specs/` 合并尚未执行，依赖评审；`docs/` 两张标注图仍由首轮 OpenCV 4.6.0 生成，未用新版本重新生成；其他分辨率、光照和素材的检出一致性未测；大图检测耗时未测。
+- 后续入口：视频输入需求见 `openspec/changes/add-video-input/`（规划完成、实现未开始），对应 Issue #1；实现时先跑通本文档第 4 组回归命令，确保图片模式不被破坏。
